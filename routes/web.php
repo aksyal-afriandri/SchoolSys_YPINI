@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AdminKelasController;
 use App\Http\Controllers\AdminGuruController;
 use App\Http\Controllers\AdminPelajaranController;
+use App\Http\Controllers\AdminTahunController;
 use App\Http\Controllers\AdminSiswaController;
 
 //Login Route
@@ -44,5 +45,10 @@ Route::get('/admin/pelajaran/data-pelajaran', [AdminPelajaranController::class, 
 Route::post('/admin/pelajaran/data-pelajaran', [AdminPelajaranController::class, 'store'])->name('admin.data-pelajaran.store');
 Route::put('/admin/pelajaran/data-pelajaran/{id}', [AdminPelajaranController::class, 'update'])->name('admin.data-pelajaran.update');
 Route::delete('/admin/pelajaran/data-pelajaran/{id}', [AdminPelajaranController::class, 'destroy'])->name('admin.data-pelajaran.destroy');
+
+Route::get('/admin/tahun/data-tahun', [AdminTahunController::class, 'index'])->name('admin.data-tahun');
+Route::post('/admin/tahun/data-tahun', [AdminTahunController::class, 'store'])->name('admin.data-tahun.store');
+Route::put('/admin/tahun/data-tahun/{id}', [AdminTahunController::class, 'update'])->name('admin.data-tahun.update');
+Route::delete('/admin/tahun/data-tahun/{id}', [AdminTahunController::class, 'destroy'])->name('admin.data-tahun.destroy');
 //Guru Route
 //Siswa Route

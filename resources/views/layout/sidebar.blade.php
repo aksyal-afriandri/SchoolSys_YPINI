@@ -40,7 +40,7 @@
                         <a class="collapse-item" href="{{ route('admin.data-guru') }}">Data Guru</a>
                         <a class="collapse-item" href="{{ route('admin.data-kelas') }}">Data Kelas</a>
                         <a class="collapse-item" href="{{ route('admin.data-pelajaran') }}">Data Pelajaran</a>
-                   
+                        <a class="collapse-item" href="{{ route('admin.data-tahun') }}">Data Tahun Ajaran</a>   
                     </div>
                 </div>
             </li>
