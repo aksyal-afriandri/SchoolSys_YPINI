@@ -15,10 +15,9 @@ use App\Http\Controllers\AdminSiswaController;
 Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.store');
 
+// middleware role
 Route::middleware('auth')->group(function () {
-    Route::get('/admin/index', function () {
-        return view('admin/index');
-    })->name('admin.index');
+    Route::get('/admin/index', [AdminDashboardController::class, 'index'])->name('admin.index');
 
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
