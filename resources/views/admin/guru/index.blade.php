@@ -44,7 +44,7 @@
                     </div>
 
                 <div class="modal fade" id="tambahGuruModal" tabindex="-1" role="dialog" aria-labelledby="tambahGuruModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
+                    <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="tambahGuruModalLabel">Tambah Data Guru</h5>
@@ -53,18 +53,45 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form method="POST" action="{{ route('admin.data-guru.store') }}">
-                                    @csrf
-                                    <div class="form-group">
-                                        <label for="nip">NIP</label>
-                                        <input type="text" name="nip" class="form-control" id="nip" required>
+                                <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" id="manual-tab" data-toggle="tab" href="#manual" role="tab" aria-controls="manual" aria-selected="true">Tambah Manual</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="import-tab" data-toggle="tab" href="#import" role="tab" aria-controls="import" aria-selected="false">Import Excel</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="manual" role="tabpanel" aria-labelledby="manual-tab">
+                                        <form method="POST" action="{{ route('admin.data-guru.store') }}">
+                                            @csrf
+                                            <div class="form-group">
+                                                <label for="nip">NIP</label>
+                                                <input type="text" name="nip" class="form-control" id="nip" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="nama">Nama</label>
+                                                <input type="text" name="nama" class="form-control" id="nama" required>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Tambah</button>
+                                        </form>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="nama">Nama</label>
-                                        <input type="text" name="nama" class="form-control" id="nama" required>
+                                    <div class="tab-pane fade" id="import" role="tabpanel" aria-labelledby="import-tab">
+                                        <form method="POST" action="{{ route('admin.data-guru.import') }}" enctype="multipart/form-data">
+                                            @csrf
+                                            <div class="form-row align-items-end">
+                                                <div class="col-md-8 form-group mb-md-0">
+                                                    <label for="file">Pilih file Excel</label>
+                                                    <input type="file" name="file" class="form-control-file" id="file" required> 
+                                                </div>
+                                                <div class="col-md-4">
+                                                        <button type="submit" class="btn btn-success btn-block">Import</button>
+                                                </div>
+                                                <small class="form-text text-muted mt-3">teks jadi export template later</small>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Tambah</button>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>

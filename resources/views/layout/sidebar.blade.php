@@ -36,6 +36,7 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
+                        <!-- data dari admin (guru mungkin bisa cek ini) -->
                         <a class="collapse-item" href="{{ route('admin.data-siswa') }}">Data Siswa</a>
                         <a class="collapse-item" href="{{ route('admin.data-guru') }}">Data Guru</a>
                         <a class="collapse-item" href="{{ route('admin.data-kelas') }}">Data Kelas</a>
@@ -65,15 +66,15 @@
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <!-- <hr class="sidebar-divider"> -->
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <!-- <div class="sidebar-heading">
                 Addons
-            </div>
+            </div> -->
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
                     aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
@@ -92,15 +93,16 @@
                         <a class="collapse-item active" href="blank.html">Blank Page</a>
                     </div>
                 </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
+            </li> -->
+<!-- 
+            Nav Item - Charts
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Charts</span></a>
-            </li>
+            </li> -->
 
+            <!-- example -->
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
